@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block body %}
+<center>
+    <h1>Your Tasks</h1>
+</center>
+
+<div class="task-list">
+    <ul>
+        {% if tasks %}
+        {% for task in tasks %}
+        <li>
+            <div class="task">
+                <div class="task-title">
+                    <h2>{{task.title}}</h2>
+                </div>
+                <br>
+                <div class="task-description">
+                    <p>{{task.description}}</p>
+                </div>
+                <br>
+                <div class="task-actions">
+                    <a href="{{url_for('update', id=task.id)}}">Edit</a>
+                    <a href="{{url_for('delete', id=task.id)}}">Delete</a>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+        {% else %}
+        <li>
+            <div class="task">
+                <div class="task-title">
+                    <h2>No tasks found</h2>
+                </div>
+            </div>
+        </li>
+        {% endif %}
+    </ul>
+</div>
+<a href="/create-task">
+    <div class="create-task">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="30" height="30">
+            <path fill="#ffffff"
+                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+        </svg>
+    </div>
+</a>
+{% endblock %}

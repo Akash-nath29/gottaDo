@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<center>
+    <h1>{{task.title}}</h1>
+</center>
+
+<div class="task">
+    <div class="task-description">
+        <p>{{task.description}}</p>
+    </div>
+    <div class="task-actions">
+        <a href="{{url_for('update', id=task.id)}}">Edit</a>
+        <a href="{{url_for('delete', id=task.id)}}">Delete</a>
+    </div>
+</div>
+
+{% endblock %}
