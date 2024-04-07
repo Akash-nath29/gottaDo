@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://akash_nath29:4tCAcRwG8xS1r5aa88JwGZ2XD8KLs9Y5@dpg-co9bsq20si5c7399uf4g-a.singapore-postgres.render.com/gottado_db'
 
 db = SQLAlchemy(app)
 #TODO: Create a new table in the database with the following fields:
