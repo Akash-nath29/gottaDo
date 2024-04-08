@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 {% block body %}
 <center>
-    <h1>Your Tasks</h1>
+    {% if curr_user %}
+    <h1>{{curr_user.name}}'s Tasks</h1>
+    {% else %}
+    <h1>Tasks</h1>
+    {% endif %}
 </center>
 
 <div class="task-list">

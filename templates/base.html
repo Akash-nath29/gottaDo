@@ -20,8 +20,14 @@
                 </svg>
             </div>
             <ul id="nav-links">
+                {% if logged_in %}
                 <li><a href="{{url_for('index')}}">Home</a></li>
                 <li><a href="/create_task">Create</a></li>
+                <li><a href="/logout">Logout</a></li>
+                {% else %}
+                <li><a href="{{url_for('login')}}">Login</a></li>
+                <li><a href="/signup">Signup</a></li>
+                {% endif %}
             </ul>
         </nav>
         <main>
