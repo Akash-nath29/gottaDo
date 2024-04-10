@@ -94,7 +94,7 @@ def create_task():
             return redirect('/')
         except Exception as e:
             return 'There was an issue adding your task \n' + str(e)
-    return render_template('create-task.html')
+    return render_template('create-task.html', logged_in=True)
 
 @app.route('/delete/<int:id>')
 def delete(id):
