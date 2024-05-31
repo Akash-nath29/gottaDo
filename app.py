@@ -5,7 +5,7 @@ from sqlalchemy import desc
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://akash_nath29:4tCAcRwG8xS1r5aa88JwGZ2XD8KLs9Y5@dpg-co9bsq20si5c7399uf4g-a.singapore-postgres.render.com/gottado_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres.hscupnncmlacqgxvyxhu:akash-nath29@aws-0-ap-south-1.pooler.supabase.com:5432/postgres'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'thisisse'
 
